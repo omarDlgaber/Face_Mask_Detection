@@ -47,8 +47,8 @@ We experimented with three Transfer Learning architectures. **MobileNetV2** was 
 
 1.  **Clone the repository:**
     ```bash
-    git clone [https://github.com/your-username/face-mask-detection.git](https://github.com/your-username/face-mask-detection.git)
-    cd face-mask-detection
+    git clone https://github.com/omarDlgaber/Face_Mask_Detection.git
+    cd Face_Mask_Detection
     ```
 
 2.  **Install dependencies:**
@@ -61,4 +61,10 @@ We experimented with three Transfer Learning architectures. **MobileNetV2** was 
     streamlit run app.py
     ```
 
-## 📂 Project Structure
+## 👤 Author
+**Omar Adel**
+* **Project:** Final Project | Data Science & AI Diploma
+* **Date:** December 2025
+
+---
+⭐ *If you find this project useful, please consider giving it a star on GitHub!*
