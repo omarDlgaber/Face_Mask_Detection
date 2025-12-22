@@ -40,7 +40,6 @@ We experimented with three Transfer Learning architectures. **MobileNetV2** was 
 * **Language:** Python.
 
 ## 📸 Demo
-*(Please add a screenshot of your application here to showcase the UI)*
 ![App Demo](assets/demo_screenshot.png)
 
 ## 🛠️ Installation & Usage
