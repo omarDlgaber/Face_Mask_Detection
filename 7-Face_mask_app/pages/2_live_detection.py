@@ -39,12 +39,12 @@ threshold = st.session_state.get("threshold", 0.5)
 # Make sure there is a camera link.
 # If no camera is connected:
 # A warning appears.
-# `st.stop()` immediately stops the rest of the code.
 if not ip_url:
     st.warning("Please go to the Settings page and enter the camera link.")
+    # `st.stop()` immediately stops the rest of the code.
     st.stop()
 
-# It shows the user which camera they are currently using.
+# It shows which camera they are currently using.
 st.write(f"Current Camera: {ip_url}")
 
 # Loading the model
@@ -103,13 +103,13 @@ st.button("Start Live Detection", on_click=start_live)
 # Pressing → makes "live" = False
 st.button("Stop", on_click=stop_live)
 
-# If the user presses "Start Live Detection" → live = True
+# If the user presses "Start Live Detection" Button → 'live' = True
 if st.session_state["live"]:
     
     # Then the loop enters. The loop continues as long as `live` equals `True`. 
     while st.session_state["live"]:
         
-        # get_live_frame() returns the last image coming from the VideoStream.
+        # get_live_frame() returns the last image coming from the VideoStream (from camera.py).
         frame = get_live_frame(vs)
         
         # If the camera loses connection → break.
@@ -120,7 +120,7 @@ if st.session_state["live"]:
         # Running the model on the frame
         # The list returns the following format:
         """results.append({
-            'box': (x1, y1, x2 - x1, y2 - y1),
+            'box': (x1, y1, x2 - x1, y2 - y1),   # (x, y, width, height)
             'label': label,
             'confidence': float(conf)
         })"""
@@ -186,12 +186,12 @@ if st.session_state["live"]:
             # Color identification: Green for the mask, red without the mask
             color = (0, 255, 0) if label == "With Mask" else (0, 0, 255)
             
-            # Box drawing
+            # ------- Box drawing -------
             # frame ==> The current image coming from the camera.
             # (x, y) ==> The top left dot of the box.
             # (x + w, y + h) ==> The bottom right point of the box.
             # color ==> Color of the box.
-            # 2 ==> Text thickness..
+            # 3 ==> Text thickness..
             cv2.rectangle(frame, (x, y), (x + w, y + h), color, 3)
             
             # Write the text over the box (ID - Status - Confirmation percentage)

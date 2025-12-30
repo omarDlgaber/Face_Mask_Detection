@@ -36,7 +36,6 @@ This is where Artificial Intelligence, specifically **Computer Vision**, plays a
 1.  **Detecting** human faces within an image or video frame (Face Detection).
 2.  **Classifying** each detected face accurately into one of two categories: **"With Mask"** or **"Without Mask"**.
 
-We will explore the use of **Convolutional Neural Networks (CNNs)**, potentially leveraging pre-trained models (Transfer Learning) such as MobileNetV2 or VGG, or utilizing advanced object detection models like **YOLO**, to achieve high accuracy and efficient performance suitable for real-world scenarios.
 """)
 
 # streamlit run app.py

@@ -66,7 +66,7 @@ def detect_mask_dnn(model, frame, threshold=0.5):
     # detections.shape[2] = Number of faces detected.
     for i in range(detections.shape[2]):
         
-        # Caffe models like res10_300x300_ssd when you forward, return the result in the form of a (4D Array) that looks a bit strange, like this: [Batch Size, Class Label, Detections, Data Info]
+        # Caffe models like res10_300x300_ssd when you forward, return the result in the form of a (4D Array), like this: [Batch Size, Class Label, Detections, Data Info]
         """ 
         Why [0, 0, i, 2]?
         
